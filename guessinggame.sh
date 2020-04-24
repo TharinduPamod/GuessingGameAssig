@@ -1,6 +1,7 @@
 function direct {
 
 	count=2
+
 	while [[ $count -gt 1 ]]
 	do
 	dir=$(ls |wc -l)
