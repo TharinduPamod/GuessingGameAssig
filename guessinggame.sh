@@ -5,14 +5,18 @@ function direct {
 	while [[ $count -gt 1 ]]
 	do
 	dir=$(ls |wc -l)
- 		echo "enter your guess of num of files:"
+ 		echo "How many file are in directory: "
         	read guess
 		if [[ $guess -eq $dir ]]
 		then
-			echo "correct"
+			echo "congratulations you correct"
 			break
-		else
-			echo "incorrect"
+		elif [[ $guess -gt $dir ]]
+		then
+			echo "guess is high and guess again"
+		elif [[ $guess -lt $dir ]]
+		then
+			echo "guess is low and guess again"
 		fi	
 	let count=$count+1
 	done
